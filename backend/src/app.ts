@@ -37,6 +37,8 @@ app.use(
   })
 );
 
+console.log("welcome")
+
 // App Routes
 app.use("/api/auth", authRoutes)
 app.use("/api/users", usersRoutes)
