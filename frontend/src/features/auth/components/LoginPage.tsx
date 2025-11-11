@@ -36,13 +36,13 @@ export default function LoginPage() {
 
     try {
       const res = await authAction(formData, API_CONFIG.ENDPOINTS.AUTH.LOGIN);
-      if (res.data.token) {
+      if (res?.data?.token) {
         setUser(res.data.user);
         setToken(res.data.token);
         router.push("/");
-        toast.success("Login successful!"); // Using a generic success message for now, can be internationalized later
+        toast.success("Login successful!");
       } else {
-        toast.error(res.message || "Something went wrong during login");
+        toast.error(res?.message || "Something went wrong during login");
       }
     } catch (error) {
       console.error(error);
