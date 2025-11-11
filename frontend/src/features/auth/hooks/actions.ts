@@ -15,6 +15,9 @@ export async function authAction(formData: FormData, endPoint: string) {
       },
     });
 
+    console.log(response);
+    
+
     const responseData = response?.data;
 
     const token = responseData?.data?.token;

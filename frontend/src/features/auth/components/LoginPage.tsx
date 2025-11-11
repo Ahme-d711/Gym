@@ -31,6 +31,9 @@ export default function LoginPage() {
     formData.append("email", values.email);
     formData.append("password", values.password);
 
+    console.log("llllllllllll");
+    
+
     try {
       const res = await authAction(formData, API_CONFIG.ENDPOINTS.AUTH.LOGIN);
       if (res.data.token) {
