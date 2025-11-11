@@ -24,7 +24,7 @@ dotenv.config();
 
 const app: Application = express();
 const PORT = process.env.PORT || 8000;
-const ALLOWED_ORIGINS = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173'];
+const ALLOWED_ORIGINS = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:3000'];
 
 // Middleware
 app.use(helmet());
@@ -37,7 +37,6 @@ app.use(
   })
 );
 
-console.log("welcome")
 
 // App Routes
 app.use("/api/auth", authRoutes)
