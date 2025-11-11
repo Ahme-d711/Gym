@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-  BASE_URL: process.env.NEXT_PUBLIC_API_URL || "https://gym-production-bd77.up.railway.app/api",
+  BASE_URL: process.env.NEXT_PUBLIC_API_URL,
   AUTH_TOKEN_KEY: "authToken",
   ENDPOINTS: {
     AUTH: {
